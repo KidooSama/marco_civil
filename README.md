@@ -2,7 +2,7 @@
 
 Este é um mini-site completo desenvolvido em HTML e CSS que apresenta os Trabalhos de Desenvolvimento Educacional (TDE) de forma organizada e visualmente atrativa.
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 marco_civil/
@@ -17,7 +17,7 @@ marco_civil/
     └── Desktop - 1.pdf # PDF de referência do infográfico
 ```
 
-## 🎯 Funcionalidades
+##  Funcionalidades
 
 ### Landing Page (index.html)
 - **Título principal**: "Trabalhos de TDE"
@@ -26,24 +26,15 @@ marco_civil/
   - TDE 2 (Em desenvolvimento)
   - TDE 3 (Em desenvolvimento)
   - TDE 4 (Em desenvolvimento)
-- Design moderno e responsivo
-- Botões com hover suave e animações
 
 ### Página TDE 1 (tde1.html)
 - **Infográfico completo** sobre o Marco Civil da Internet
-- **Seções organizadas**:
-  - **Princípios**: Responsabilização, Segurança, Liberdade de Expressão, Privacidade, Neutralidade
-  - **Direitos dos Usuários**: Privacidade, Controle de Dados, Liberdade de Expressão
-  - **Responsabilidades**: Provedores de Conexão, Plataformas/Aplicações
-  - **Poder Público**: Acesso, Inovação, Educação Digital
-  - **Impactos e Desafios**: Avanços, Dificuldades, Debates, Atualizações
-  - **Conclusão**: Resumo dos pontos principais
 
 ### Páginas TDE 2, 3 e 4
 - Páginas placeholder com mensagem "TDE em desenvolvimento"
 - Mantêm a identidade visual do projeto
 
-## 🎨 Design e Estilo
+## Design e Estilo
 
 ### Paleta de Cores
 - **Azul**: #3498db (primário)
@@ -60,28 +51,28 @@ marco_civil/
 - **Animações**: Transições suaves e efeitos hover
 - **Responsividade**: Adaptação para desktop e mobile
 
-## 🚀 Como Usar
+##  Como Usar
 
 1. **Abra o arquivo `index.html`** em qualquer navegador moderno
 2. **Navegue pelos TDEs** clicando nos botões da landing page
 3. **Explore o infográfico** do TDE 1 para conhecer o Marco Civil da Internet
 4. **Use o botão "Voltar"** para retornar à página inicial
 
-## 📱 Responsividade
+##  Responsividade
 
 O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 - **Desktop**: Layout em grid com múltiplas colunas
 - **Tablet**: Ajuste automático para telas médias
 - **Mobile**: Layout em coluna única otimizado para touch
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica e acessível
 - **CSS3**: Estilos modernos com Grid, Flexbox e animações
 - **Google Fonts**: Tipografia Roboto
 - **Design Responsivo**: Mobile-first approach
 
-## 📋 Conteúdo do Infográfico
+## Conteúdo do Infográfico
 
 O TDE 1 apresenta informações completas sobre o **Marco Civil da Internet**, incluindo:
 
@@ -91,18 +82,3 @@ O TDE 1 apresenta informações completas sobre o **Marco Civil da Internet**, i
 - **Impactos na sociedade** digital brasileira
 - **Desafios atuais** e necessidades de atualização
 
-## 🔧 Personalização
-
-Para personalizar o projeto:
-1. **Modifique as cores** no arquivo `style.css`
-2. **Adicione conteúdo** nas páginas TDE 2, 3 e 4
-3. **Atualize as informações** do infográfico conforme necessário
-4. **Adicione novas seções** seguindo o padrão existente
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais e está disponível para uso e modificação.
-
----
-
-**Desenvolvido com ❤️ para apresentação dos Trabalhos de TDE**
