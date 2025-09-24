@@ -28,3 +28,5 @@ O TDE 1 apresenta informações completas sobre o **Marco Civil da Internet**, i
 - **Impactos na sociedade** digital brasileira
 - **Desafios atuais** e necessidades de atualização
 
+
+
