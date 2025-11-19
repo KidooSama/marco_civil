@@ -556,6 +556,84 @@ footer::after {
     margin: 5px 0;
 }
 
+/* Estilos para gráficos */
+.chart-container {
+    margin: 30px 0;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.chart-card canvas {
+    max-height: 400px;
+    margin-bottom: 30px;
+}
+
+.chart-highlights {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf1 100%);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 5px solid #667eea;
+    margin-top: 20px;
+}
+
+.chart-highlights h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-highlights h3 i {
+    color: #667eea;
+}
+
+.chart-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chart-highlights ul li {
+    padding: 12px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.chart-highlights ul li:last-child {
+    border-bottom: none;
+}
+
+.chart-highlights ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.chart-highlights ul li strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
@@ -631,6 +709,22 @@ footer::after {
     .footer-item {
         padding: 18px 15px;
     }
+    
+    .chart-card {
+        padding: 20px;
+    }
+    
+    .chart-card canvas {
+        max-height: 300px;
+    }
+    
+    .chart-highlights {
+        padding: 20px;
+    }
+    
+    .chart-highlights h3 {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -660,6 +754,28 @@ footer::after {
     
     .footer-item {
         padding: 15px;
+    }
+    
+    .chart-card {
+        padding: 15px;
+    }
+    
+    .chart-card canvas {
+        max-height: 250px;
+    }
+    
+    .chart-highlights {
+        padding: 15px;
+    }
+    
+    .chart-highlights h3 {
+        font-size: 1rem;
+    }
+    
+    .chart-highlights ul li {
+        font-size: 0.9rem;
+        padding: 10px 0;
+        padding-left: 20px;
     }
 }
 

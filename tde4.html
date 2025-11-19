@@ -3,25 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDE 4 - Em Desenvolvimento</title>
+    <title>Análise Comparativa - Pesquisa sobre LGPD</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <header class="tde-header">
             <a href="index.html" class="back-button">Voltar</a>
-            <h1 class="tde-title">TDE 4</h1>
-            <p class="tde-subtitle">Em desenvolvimento</p>
+            <h1 class="tde-title">Análise Comparativa: Pesquisa sobre Conhecimento e Aplicação da LGPD</h1>
+            <p class="tde-subtitle">TDE 4 - Análise de Dados e Comparações Estatísticas</p>
         </header>
         
-        <main class="development-content">
-            <div class="development-card">
-                <i class="fas fa-tools fa-spin" style="font-size: 4rem; color: #e74c3c; margin-bottom: 20px;"></i>
-                <h2>TDE em desenvolvimento</h2>
-                <p>Esta página está sendo preparada para futuras atualizações.</p>
-            </div>
+        <main class="infographic">
+            <!-- Introdução -->
+            <section class="info-section principles">
+                <h2 class="section-title">Sobre a Pesquisa</h2>
+                <div class="info-grid">
+                    <div class="info-card principle-card">
+                        <i class="fas fa-clipboard-list info-card-icon"></i>
+                        <h3><span class="icon-text">Objetivo</span></h3>
+                        <p>Analisar o nível de conhecimento e aplicação da LGPD entre diferentes grupos e identificar correlações entre variáveis.</p>
+                    </div>
+                    <div class="info-card principle-card">
+                        <i class="fas fa-chart-bar info-card-icon"></i>
+                        <h3><span class="icon-text">Metodologia</span></h3>
+                        <p>Análise comparativa de respostas coletadas através de questionário estruturado sobre conhecimento e práticas relacionadas à LGPD.</p>
+                    </div>
+                    <div class="info-card principle-card">
+                        <i class="fas fa-search info-card-icon"></i>
+                        <h3><span class="icon-text">Análise</span></h3>
+                        <p>Comparação entre perguntas convergentes para identificar padrões, correlações e pontos de atenção na aplicação da lei.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 1: Nível de Conhecimento sobre LGPD -->
+            <section class="info-section user-rights">
+                <h2 class="section-title">Nível de Conhecimento sobre LGPD</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="knowledgeChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Conhecimento básico predominante:</strong> 20 pessoas (46,5%) possuem conhecimento básico, indicando que a LGPD está sendo divulgada, mas de forma superficial.</li>
+                                <li><strong>Lacuna em conhecimento avançado:</strong> Apenas 2 pessoas (4,7%) possuem conhecimento avançado, evidenciando necessidade de capacitação mais profunda.</li>
+                                <li><strong>Desconhecimento significativo:</strong> 11 pessoas (25,6%) não possuem conhecimento sobre a LGPD, indicando necessidade de maior divulgação e educação.</li>
+                                <li><strong>Nível intermediário razoável:</strong> 10 pessoas (23,3%) possuem conhecimento intermediário, mostrando um grupo com potencial para aprofundamento.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 2: Aplicação da LGPD na Organização -->
+            <section class="info-section responsibilities">
+                <h2 class="section-title">Aplicação da LGPD na Organização</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="applicationChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Maioria já concluiu a adequação:</strong> 3 empresas (60%) já concluíram a adequação à LGPD, mostrando comprometimento com a conformidade.</li>
+                                <li><strong>Processo em andamento:</strong> 1 empresa (20%) está em processo de adequação, indicando que ainda há trabalho a ser feito.</li>
+                                <li><strong>Empresa sem adequação:</strong> 1 empresa (20%) ainda não iniciou o processo, representando um risco de não conformidade.</li>
+                                <li><strong>Resultado positivo geral:</strong> 80% das empresas pesquisadas já iniciaram ou concluíram a adequação, indicando boa adesão à lei.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 3: Comparação Conhecimento vs Leitura de Políticas -->
+            <section class="info-section public-power">
+                <h2 class="section-title">Conhecimento sobre LGPD vs Leitura de Políticas de Privacidade</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="comparisonChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Alto conhecimento, baixa leitura:</strong> 33 pessoas (76,7%) conhecem a LGPD, mas apenas 1 pessoa (2,3%) sempre lê políticas de privacidade, mostrando gap entre conhecimento e prática.</li>
+                                <li><strong>Leitura de políticas negligenciada:</strong> 30 pessoas (69,8%) nunca leem políticas de privacidade, mesmo conhecendo a LGPD, indicando falta de engajamento prático.</li>
+                                <li><strong>Comportamento preocupante:</strong> A maioria conhece a lei mas não pratica a leitura de políticas, sugerindo necessidade de conscientização sobre importância da leitura.</li>
+                                <li><strong>Oportunidade de melhoria:</strong> Apenas 8 pessoas (18,6%) leem políticas às vezes ou raramente, mostrando grande potencial para melhoria neste comportamento.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 4: Conhecimento sobre DPO vs Exercício de Direitos -->
+            <section class="info-section impacts">
+                <h2 class="section-title">Conhecimento sobre DPO vs Exercício de Direitos</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="concernsChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Baixo conhecimento sobre DPO:</strong> Apenas 11 pessoas (25,6%) conhecem o Encarregado de Dados, indicando necessidade de maior divulgação deste importante papel.</li>
+                                <li><strong>Exercício de direitos mais frequente:</strong> 24 pessoas (55,8%) já solicitaram exclusão ou correção de dados, mostrando que as pessoas exercem seus direitos mesmo sem conhecer o DPO.</li>
+                                <li><strong>Correlação interessante:</strong> Mais pessoas exercem direitos (55,8%) do que conhecem o DPO (25,6%), sugerindo que o conhecimento técnico não é pré-requisito para exercer direitos.</li>
+                                <li><strong>Oportunidade de educação:</strong> 32 pessoas (74,4%) não conhecem o DPO, representando uma grande oportunidade de educação sobre este importante mecanismo da LGPD.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 5: Leitura de Políticas de Privacidade -->
+            <section class="info-section principles">
+                <h2 class="section-title">Frequência de Leitura de Políticas de Privacidade</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="trainingChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Leitura de políticas extremamente baixa:</strong> 30 pessoas (69,8%) nunca leem políticas de privacidade, representando um comportamento de risco significativo.</li>
+                                <li><strong>Comportamento preocupante:</strong> Apenas 1 pessoa (2,3%) sempre lê políticas, mostrando que a leitura não é um hábito estabelecido.</li>
+                                <li><strong>Falta de engajamento:</strong> Mesmo com 12 pessoas (27,9%) lendo às vezes ou raramente, o comportamento geral mostra falta de engajamento com proteção de dados.</li>
+                                <li><strong>Necessidade urgente de conscientização:</strong> Os dados mostram necessidade urgente de campanhas educativas sobre importância da leitura de políticas de privacidade.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 6: Comparação por Setor -->
+            <section class="info-section user-rights">
+                <h2 class="section-title">Aplicação da LGPD por Setor</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="sectorChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Empresas com melhor conhecimento:</strong> 100% das empresas (5/5) conhecem a LGPD, mostrando que o setor empresarial está mais informado.</li>
+                                <li><strong>Pessoas físicas com bom conhecimento:</strong> 33 pessoas (76,7%) conhecem a LGPD, indicando boa divulgação entre cidadãos.</li>
+                                <li><strong>ONGs precisam de atenção:</strong> Apenas 2 de 3 ONGs (66,7%) conhecem a LGPD, sugerindo necessidade de maior apoio a este setor.</li>
+                                <li><strong>Setor empresarial como referência:</strong> Empresas mostram 100% de conhecimento, servindo como modelo para outros grupos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 7: Medidas de Conformidade - ONGs vs Empresas -->
+            <section class="info-section responsibilities">
+                <h2 class="section-title">Medidas de Conformidade: ONGs vs Empresas</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="complianceChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Política de privacidade:</strong> Empresas têm 100% (5/5) de políticas formalizadas, enquanto ONGs têm 66,7% (2/3), mostrando que empresas estão mais estruturadas.</li>
+                                <li><strong>Responsável/DPO:</strong> Empresas têm 40% (2/5) com DPO nomeado, enquanto ONGs têm 66,7% (2/3) com responsável, indicando que ONGs, apesar de menores, têm melhor definição de responsabilidade.</li>
+                                <li><strong>Processo de exclusão:</strong> ONGs têm 66,7% (2/3) com processo de exclusão, enquanto empresas têm 100% (5/5) com plano de resposta a incidentes, mostrando diferentes focos de conformidade.</li>
+                                <li><strong>Gap estrutural:</strong> Empresas mostram maior estruturação formal, enquanto ONGs precisam melhorar políticas e processos documentados.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráfico 8: Segurança e Gestão de Dados - ONGs vs Empresas -->
+            <section class="info-section public-power">
+                <h2 class="section-title">Segurança e Gestão de Dados: ONGs vs Empresas</h2>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <canvas id="securityChart"></canvas>
+                        <div class="chart-highlights">
+                            <h3><i class="fas fa-lightbulb"></i> Destaques Importantes</h3>
+                            <ul>
+                                <li><strong>Medidas técnicas de segurança:</strong> Empresas têm 100% (5/5) com medidas técnicas, enquanto ONGs têm 100% (3/3) com controle de acesso, mostrando que ambos os grupos investem em segurança.</li>
+                                <li><strong>Armazenamento digital:</strong> ONGs têm 66,7% (2/3) com armazenamento digital, enquanto empresas têm 100% (5/5), indicando que empresas estão mais digitalizadas.</li>
+                                <li><strong>Treinamento:</strong> Empresas têm 80% (4/5) com treinamento de LGPD, enquanto ONGs não reportaram treinamento específico, mostrando necessidade de capacitação nas ONGs.</li>
+                                <li><strong>Registro do ciclo de vida:</strong> Empresas têm 40% (2/5) com registro completo e 20% (1/5) parcial, indicando que o mapeamento de dados ainda precisa ser melhorado.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusões -->
+            <section class="info-section conclusion">
+                <h2 class="section-title">Conclusões e Recomendações</h2>
+                <div class="info-card conclusion-card">
+                    <i class="fas fa-check-circle info-card-icon"></i>
+                    <p><strong>Principais Descobertas:</strong></p>
+                    <ul style="text-align: left; max-width: 800px; margin: 20px auto;">
+                        <li>Existe uma correlação positiva entre conhecimento teórico e aplicação prática da LGPD</li>
+                        <li>O gap entre conhecimento e implementação indica necessidade de maior suporte técnico e recursos</li>
+                        <li>Setores mais regulados apresentam melhor adequação, sugerindo que experiência prévia facilita a implementação</li>
+                        <li>A capacitação das equipes é um fator crítico para o sucesso da aplicação da LGPD</li>
+                        <li>Segurança de dados e compliance são as principais preocupações, refletindo a importância da proteção de dados pessoais</li>
+                    </ul>
+                    <p style="margin-top: 20px;"><strong>Recomendações:</strong> Investir em programas de capacitação contínua, fornecer suporte técnico especializado e criar frameworks de implementação adaptados a cada setor.</p>
+                </div>
+            </section>
         </main>
     </div>
     
@@ -55,7 +241,598 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Configuração global do Chart.js
+        Chart.defaults.font.family = 'Roboto, sans-serif';
+        Chart.defaults.font.size = 12;
+        Chart.defaults.color = '#2c3e50';
+
+        // Plugin para mostrar valores nos gráficos de barra
+        const barLabelPlugin = {
+            id: 'barLabel',
+            afterDatasetsDraw: (chart) => {
+                const ctx = chart.ctx;
+                chart.data.datasets.forEach((dataset, datasetIndex) => {
+                    const meta = chart.getDatasetMeta(datasetIndex);
+                    meta.data.forEach((bar, index) => {
+                        const value = dataset.data[index];
+                        if (value !== null && value !== undefined) {
+                            ctx.save();
+                            ctx.fillStyle = '#2c3e50';
+                            ctx.font = 'bold 12px Roboto';
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'bottom';
+                            
+                            const position = bar.tooltipPosition();
+                            ctx.fillText(value.toString(), position.x, position.y - 5);
+                            ctx.restore();
+                        }
+                    });
+                });
+            }
+        };
+
+        // Gráfico 1: Nível de Conhecimento sobre LGPD (Pessoas Físicas - 43 respostas)
+        // Dados: Avançado: 2, Intermediário: 10, Básico: 20, Nenhum: 11
+        const knowledgeCtx = document.getElementById('knowledgeChart').getContext('2d');
+        new Chart(knowledgeCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Avançado (2)', 'Intermediário (10)', 'Básico (20)', 'Nenhum conhecimento (11)'],
+                datasets: [{
+                    data: [2, 10, 20, 11],
+                    backgroundColor: [
+                        '#2ecc71',
+                        '#3498db',
+                        '#f39c12',
+                        '#e74c3c'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            },
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                if (data.labels.length && data.datasets.length) {
+                                    return data.labels.map((label, i) => {
+                                        const value = data.datasets[0].data[i];
+                                        const total = data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                        const percent = ((value / total) * 100).toFixed(1);
+                                        return {
+                                            text: `${label} - ${value} respostas (${percent}%)`,
+                                            fillStyle: data.datasets[0].backgroundColor[i],
+                                            hidden: false,
+                                            index: i
+                                        };
+                                    });
+                                }
+                                return [];
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Nível de Conhecimento sobre LGPD - Pessoas Físicas (Total: 43 respostas)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} respostas (${percent}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 2: Aplicação da LGPD nas Empresas (5 empresas)
+        // Dados: Já concluímos: 3, Em andamento: 1, Não iniciada: 1 (assumindo que não respondeu = não iniciada)
+        const applicationCtx = document.getElementById('applicationChart').getContext('2d');
+        new Chart(applicationCtx, {
+            plugins: [barLabelPlugin],
+            type: 'bar',
+            data: {
+                labels: ['Já concluída (3)', 'Em andamento (1)', 'Não iniciada (1)'],
+                datasets: [{
+                    label: 'Número de Empresas',
+                    data: [3, 1, 1],
+                    backgroundColor: [
+                        '#2ecc71',
+                        '#f39c12',
+                        '#e74c3c'
+                    ],
+                    borderRadius: 8,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Status de Adequação à LGPD - Empresas (Total: 5 empresas)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.parsed.y;
+                                const total = 5;
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${value} empresa(s) (${percent}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 5,
+                        ticks: {
+                            stepSize: 1,
+                            callback: function(value) {
+                                return value + ' empresa(s)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 3: Comparação - Conhece LGPD vs Leitura de Políticas de Privacidade
+        // Dados: Conhece LGPD: Sim: 33, Não: 10
+        // Leitura de políticas: Sempre: 1, Às vezes: 7, Raramente: 5, Nunca: 30
+        const comparisonCtx = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(comparisonCtx, {
+            plugins: [barLabelPlugin],
+            type: 'bar',
+            data: {
+                labels: ['Conhece LGPD', 'Leitura de Políticas'],
+                datasets: [{
+                    label: 'Sim / Sempre',
+                    data: [33, 1],
+                    backgroundColor: '#2ecc71',
+                    borderRadius: 8
+                }, {
+                    label: 'Às vezes / Raramente',
+                    data: [0, 12],
+                    backgroundColor: '#f39c12',
+                    borderRadius: 8
+                }, {
+                    label: 'Não / Nunca',
+                    data: [10, 30],
+                    backgroundColor: '#e74c3c',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Comparação: Conhecimento sobre LGPD vs Leitura de Políticas de Privacidade (43 pessoas)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label || '';
+                                const value = context.parsed.y;
+                                return `${label}: ${value} pessoas`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 45,
+                        ticks: {
+                            stepSize: 5,
+                            callback: function(value) {
+                                return value + ' pessoas';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 4: Conhecimento sobre DPO vs Solicitação de Exclusão/Correção
+        // Dados: Conhece DPO: Sim: 11, Não: 32
+        // Já solicitou exclusão/correção: Sim: 24, Não: 19
+        const concernsCtx = document.getElementById('concernsChart').getContext('2d');
+        new Chart(concernsCtx, {
+            plugins: [barLabelPlugin],
+            type: 'bar',
+            data: {
+                labels: ['Conhece DPO', 'Solicitou Exclusão/Correção'],
+                datasets: [{
+                    label: 'Sim',
+                    data: [11, 24],
+                    backgroundColor: '#2ecc71',
+                    borderRadius: 8
+                }, {
+                    label: 'Não',
+                    data: [32, 19],
+                    backgroundColor: '#e74c3c',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Conhecimento sobre DPO vs Exercício de Direitos (43 pessoas)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label || '';
+                                const value = context.parsed.y;
+                                const total = 43;
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} pessoas (${percent}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 45,
+                        ticks: {
+                            stepSize: 5,
+                            callback: function(value) {
+                                return value + ' pessoas';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 5: Leitura de Políticas de Privacidade (43 pessoas)
+        // Dados: Sempre: 1, Às vezes: 7, Raramente: 5, Nunca: 30
+        const trainingCtx = document.getElementById('trainingChart').getContext('2d');
+        new Chart(trainingCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Sempre (1)', 'Às vezes (7)', 'Raramente (5)', 'Nunca (30)'],
+                datasets: [{
+                    data: [1, 7, 5, 30],
+                    backgroundColor: [
+                        '#2ecc71',
+                        '#3498db',
+                        '#f39c12',
+                        '#e74c3c'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            },
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                if (data.labels.length && data.datasets.length) {
+                                    return data.labels.map((label, i) => {
+                                        const value = data.datasets[0].data[i];
+                                        const total = data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                        const percent = ((value / total) * 100).toFixed(1);
+                                        return {
+                                            text: `${label} - ${value} pessoas (${percent}%)`,
+                                            fillStyle: data.datasets[0].backgroundColor[i],
+                                            hidden: false,
+                                            index: i
+                                        };
+                                    });
+                                }
+                                return [];
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Frequência de Leitura de Políticas de Privacidade (Total: 43 pessoas)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} pessoas (${percent}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 6: Comparação entre Pessoas Físicas, ONGs e Empresas
+        // Dados: Pessoas Físicas: 43, ONGs: 3, Empresas: 5
+        // Conhecimento sobre LGPD: PF (Sim: 33, Não: 10), ONGs (Sim: 2, Não: 1), Empresas (Sim: 5, Não: 0)
+        const sectorCtx = document.getElementById('sectorChart').getContext('2d');
+        new Chart(sectorCtx, {
+            plugins: [barLabelPlugin],
+            type: 'bar',
+            data: {
+                labels: ['Pessoas Físicas (43)', 'ONGs (3)', 'Empresas (5)'],
+                datasets: [{
+                    label: 'Conhece LGPD',
+                    data: [33, 2, 5],
+                    backgroundColor: '#2ecc71',
+                    borderRadius: 8
+                }, {
+                    label: 'Não conhece LGPD',
+                    data: [10, 1, 0],
+                    backgroundColor: '#e74c3c',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Conhecimento sobre LGPD por Grupo de Respondentes',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label || '';
+                                const value = context.parsed.y;
+                                const total = context.chart.data.labels[context.dataIndex].match(/\d+/)[0];
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} de ${total} (${percent}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 45,
+                        ticks: {
+                            stepSize: 5,
+                            callback: function(value) {
+                                return value + ' respostas';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 7: Medidas de Conformidade - ONGs vs Empresas
+        // ONGs (3): Política: Sim: 2, Não: 1 | Responsável: Sim: 2, Não: 1 | Processo exclusão: Sim: 2, Não: 1
+        // Empresas (5): Política: Sim: 5 | DPO: Sim: 2, Não sei: 2, Não: 1 | Plano resposta: Sim: 5
+        const complianceCtx = document.getElementById('complianceChart').getContext('2d');
+        new Chart(complianceCtx, {
+            plugins: [barLabelPlugin],
+            type: 'bar',
+            data: {
+                labels: ['Política de Privacidade', 'Responsável/DPO', 'Processo Exclusão/Plano Resposta'],
+                datasets: [{
+                    label: 'ONGs (3)',
+                    data: [2, 2, 2],
+                    backgroundColor: '#3498db',
+                    borderRadius: 8
+                }, {
+                    label: 'Empresas (5)',
+                    data: [5, 2, 5],
+                    backgroundColor: '#2ecc71',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Medidas de Conformidade: ONGs vs Empresas',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label || '';
+                                const value = context.parsed.y;
+                                const total = label.includes('ONGs') ? 3 : 5;
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} de ${total} (${percent}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 6,
+                        ticks: {
+                            stepSize: 1,
+                            callback: function(value) {
+                                return value + ' organização(ões)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico 8: Segurança e Gestão de Dados - ONGs vs Empresas
+        // ONGs (3): Armazenamento digital: Sim: 2, Não: 1 | Controle acesso: Sim: 3 | Incidente: Não: 3
+        // Empresas (5): Medidas técnicas: Sim: 5 | Treinamento: Sim: 4, Não: 1 | Registro ciclo: Sim: 2, Parcial: 1, Não: 2
+        const securityCtx = document.getElementById('securityChart').getContext('2d');
+        new Chart(securityCtx, {
+            plugins: [barLabelPlugin],
+            type: 'bar',
+            data: {
+                labels: ['Armazenamento Digital / Medidas Técnicas', 'Controle de Acesso / Treinamento', 'Registro do Ciclo de Vida'],
+                datasets: [{
+                    label: 'ONGs (3)',
+                    data: [2, 3, 0],
+                    backgroundColor: '#9b59b6',
+                    borderRadius: 8
+                }, {
+                    label: 'Empresas (5)',
+                    data: [5, 4, 2],
+                    backgroundColor: '#f39c12',
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Segurança e Gestão de Dados: ONGs vs Empresas',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        padding: 20
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.dataset.label || '';
+                                const value = context.parsed.y;
+                                const total = label.includes('ONGs') ? 3 : 5;
+                                const percent = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} de ${total} (${percent}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 6,
+                        ticks: {
+                            stepSize: 1,
+                            callback: function(value) {
+                                return value + ' organização(ões)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
-
-
